@@ -8,8 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "next": "10.0.7",
+    "next-compose-plugins": "^2.2.1",
+    "next-images": "^1.7.0",
+    "next-react-svg": "^1.1.2",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "webpack": "^5.24.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.6",
+    "tailwindcss": "^2.0.3"
   }
 }
