@@ -17,7 +17,7 @@ function Random( {data} ) {
                         return (
                             <li key={todo.id} className="border border-indigo-700 p-4">
                                 {todo?.title ?? "-"}{" "}
-                                <Link href={`/random/${todo.id}`}>
+                                <Link href="/random/[id]" as={`/random/${todo.id}`}>
                                     <a>Launch</a>
                                 </Link>
                             </li>
