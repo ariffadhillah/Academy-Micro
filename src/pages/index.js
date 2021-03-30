@@ -1,12 +1,14 @@
 import Head from 'next/head';
 import Link from 'next/link'
 
-import axios from "configs/axios";
+import axios from "src/configs/axios";
 
+import Circle from "public/images/circle-accent-1.svg";
 // npm i --save-dev autoprefixer postcss-cli tailwindcss
 // "watch:css": "postcss --watch tailwindcss/style.css -o src/assets/css/style.css" 
-function Home(props) {
-  console.log(props)
+
+function Home( {data} ) {
+  // console.log(props)
   return (
     <div className="container mx-auto mt-4">
       <Head>
@@ -15,10 +17,9 @@ function Home(props) {
       </Head>
 
       <main>
-        <h1>saya halaman tama</h1>
-        <Link href="/random">
-        <a> Bring me to</a>
-        </Link>
+        <section className="pt-10">
+        <Circle className="absolute left-0 bottom-0"></Circle>
+        </section>
       </main>
       
     </div>
@@ -27,8 +28,8 @@ function Home(props) {
 
 Home.getInitialProps = async () => {
   try {
-    const data = await axios.get('/courses')
-    return data
+    const data = await axios.get(`/courses`)
+    return { data: data.data.data };
   }catch(error) {
     return error
   }
