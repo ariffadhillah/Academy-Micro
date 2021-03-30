@@ -1,8 +1,12 @@
 import Head from 'next/head';
 import Link from 'next/link'
+
+import axios from "configs/axios";
+
 // npm i --save-dev autoprefixer postcss-cli tailwindcss
 // "watch:css": "postcss --watch tailwindcss/style.css -o src/assets/css/style.css" 
-export default function Home() {
+function Home(props) {
+  console.log(props)
   return (
     <div className="container mx-auto mt-4">
       <Head>
@@ -20,3 +24,14 @@ export default function Home() {
     </div>
   );
 }
+
+Home.getInitialProps = async () => {
+  try {
+    const data = await axios.get('/courses')
+    return data
+  }catch(error) {
+    return error
+  }
+}
+
+export default Home;
