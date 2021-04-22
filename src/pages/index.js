@@ -5,6 +5,8 @@ import axios from "src/configs/axios";
 
 import Header from 'src/parts/Header';
 import Hero from 'src/parts/Hero';
+import Clients from 'src/parts/Clients'
+
 
 
 import Circle from "public/images/circle-accent-1.svg";
@@ -17,7 +19,7 @@ function Home( {data} ) {
     <>
       <Head>
         <title>App Micro</title>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
       <main>
@@ -28,6 +30,9 @@ function Home( {data} ) {
           <Header></Header>
           <Hero></Hero>
         </div>
+        </section>
+        <section className="container mx-auto pt-24">
+          <Clients></Clients>
         </section>
       </main>
       
