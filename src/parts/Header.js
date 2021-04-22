@@ -24,28 +24,28 @@ export default function Header({ onLight }) {
             <ul className="flex">
                 <li>
                     <Link href="/">
-                        <a className={[linkColor, "text-white hover:text-teal-500 text-lg px-6 py-3"].join(" ")}>
+                        <a className={[linkColor, "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium"].join(" ")}>
                         Home
                         </a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/">
-                        <a className={[linkColor, "text-white hover:text-teal-500 text-lg px-6 py-3"].join(" ")}>Pricing</a>
+                        <a className={[linkColor, "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium"].join(" ")}>Pricing</a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/">
-                        <a className={[linkColor, "text-white hover:text-teal-500 text-lg px-6 py-3"].join(" ")}>Features</a>
+                        <a className={[linkColor, "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium"].join(" ")}>Features</a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/">
-                        <a className={[linkColor, "text-white hover:text-teal-500 text-lg px-6 py-3"].join(" ")}>Story</a>
+                        <a className={[linkColor, "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium"].join(" ")}>Story</a>
                     </Link>
                 </li>
                 <li>
-                    <a target="_blank" rel="noopener noereferrer" href={linkCTA} className="bg-indigo-700 hover:bg-indigo-800 transition-all duration-200 text-white hover:text-teal-500 text-lg px-6 py-3 ml-6">{textCTA}</a>
+                    <a target="_blank" rel="noopener noereferrer" href={linkCTA} className="bg-indigo-700 hover:bg-indigo-800 transition-all duration-200 text-white hover:text-teal-500 text-lg px-6 py-3 font-medium ml-6">{textCTA}</a>
                 </li>
 
             </ul>
