@@ -5,7 +5,11 @@ import axios from "src/configs/axios";
 
 import Header from 'src/parts/Header';
 import Hero from 'src/parts/Hero';
-import Clients from 'src/parts/Clients'
+import Clients from 'src/parts/Clients';
+import ListCourses from 'src/parts/ListCourses';
+
+
+
 
 
 
@@ -19,7 +23,7 @@ function Home( {data} ) {
     <>
       <Head>
         <title>App Micro</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
@@ -33,6 +37,9 @@ function Home( {data} ) {
         </section>
         <section className="container mx-auto pt-24">
           <Clients></Clients>
+        </section>        
+        <section className="container mx-auto pt-24">
+          <ListCourses data={data}></ListCourses>
         </section>
       </main>
       
