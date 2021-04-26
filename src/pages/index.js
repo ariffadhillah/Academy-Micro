@@ -23,7 +23,7 @@ function Home( {data} ) {
     <>
       <Head>
         <title>App Micro</title>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
       <main>

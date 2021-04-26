@@ -5,6 +5,9 @@ import RenderItem from './RenderItem'
 
 
 export default function ListCourses({ data }) {
+    // const datakursus = data.splice(i, 1);
+    // console.log(datakursus)
+
     return (
     <>
         <div className="flex justify-between intems-center">
