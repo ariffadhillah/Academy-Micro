@@ -7,10 +7,9 @@ import IconPlay from "public/images/icon-play.svg";
 
 export default function RenderItem({ item }) {
     console.log(item)
-    // const itemimga = item.slice(1,)
 
     return (
-        <div className="w-1/3 px-2">
+        <div className="w-1/4 px-2 mb-8">
             <div className="item relative">
                 <figure className="item-image">
                     <IconPlay></IconPlay>
