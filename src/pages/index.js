@@ -43,6 +43,7 @@ function Home( {data} ) {
         <section className="container mx-auto pt-24">
           <ListCategories></ListCategories>
         </section>
+        <section className="container mx-auto py-24"></section>
       </main>
       
     </>
