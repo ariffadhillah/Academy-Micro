@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export default function Hero() {
+    const [state, setstate] = useState( () => "")
     function submit() {
-
+        window.open(`${process.env.NEXT_PUBLIC_MEMBERPAGE_URL}/register?email=${state}`);
     }
 
     return (
@@ -13,11 +14,17 @@ export default function Hero() {
                     <span className="text-teal-400">Skills</span>
                 </h1>
                 <p className="text-white text-lg mb-8">We provide tons pathskill that you <br />can choose and focus on</p>
-
                 <form onSubmit={submit}>
-                <input type="email" className="bg-white focus:outline-none border-0 px-6 py-3 w-1/2" placeholder="Your email addres"/>
+                        <input type="email" onChange={(event) =>setstate(event.target.value)} className="bg-white focus:outline-none border-0 px-4 md:px-6 py-3 w-full md:w-1/2 mt-8" placeholder="Your email addres" />
+                        
+                        <button className="bg-orange-500 hover:bg-orange-400 transition-all duration-200 focus:outline-none shadow-inner text-white px-4 md:px-6 py-3 whitespace-no-wrap">
+                            Daftar Now
+                        </button>
+                    </form>
+                {/* <form onSubmit={submit}>
+                <input type="email"  className="bg-white focus:outline-none border-0 px-6 py-3 w-1/2" placeholder="Your email addres"/>
                 <buttom className="bg-orange-500 hover:bg-orange-400 transition-all duration-200 focus:outline-none shadow-inner text-white px-6 py-3">Daftar Now</buttom>
-                </form>
+                </form> */}
             </div>
             <div className="hidden w-1/2 md:flex justify-end pt-24 pr-16">
                 <div className="relative" style={{width: 369, height:400}}>
