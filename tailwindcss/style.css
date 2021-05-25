@@ -13,7 +13,20 @@
 
 /* @tailwind screens; */
 
+.video-wrapper {
+  @apply absolute inset-0 z-0;
+  padding-bottom: 56.25%;
+  height: 0;
+}
 
+.video-wrapper iframe {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+.video-wrapper::before {
+  @apply cursor-pointer z-10 inset-0 absolute;
+  content: "";
+}
 
 .header-clipping {
     @apply relative ;
