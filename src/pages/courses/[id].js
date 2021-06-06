@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 
+import Header from 'src/parts/Header'
+
 import courses from "src/constants/api/courses"
 
 import Youtube from 'react-youtube'
@@ -13,8 +15,7 @@ function DetailCourse({data}) {
             <title>Micro</title>
         </Head>
         <section className="pt-10 relative overflow-hidden" style={{height: 660}}>
-            {
-                data?.chapters?.[0]?.lessons?.[0]?.video && 
+            {data?.chapters?.[0]?.lessons?.[0]?.video && ( 
                 <div className="video-wrapper">
                     <Youtube 
                         videoId={data?.chapters?.[0]?.lessons?.[0]?.video}
@@ -26,14 +27,27 @@ function DetailCourse({data}) {
                                 autoplay: 1,
                                 controls: 0,
                                 showinfo: 0
-                            }
+                            },
                         }}
                         onEnd={(event) => {
                             event.target.playVideo();
                         }}
                     ></Youtube>
                 </div>
-            }                
+            )}                
+            <div className="absolute inset-0 z-0 w-full bg-black opacity-75">
+                <div className="meta-title absolute inset-0 object-fill z-0 w-full flex justify-center items-center">
+                    <div className="text-center">
+                        <h3 className="text-lg text-white">Kelas Online: </h3>
+                        <h4 className="text-6xl text-teal-500 font-semibold">
+                            {data?.name ?? "Nama Kelas"}
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div className="container mx-auto z-10 relative">
+                <Header></Header>
+            </div>
         </section>
        </>
     );
