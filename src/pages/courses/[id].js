@@ -34,7 +34,7 @@ function DetailCourse({data}) {
             const stickyOffsetTop = footer.current.getBoundingClientRect().top;
 
             const stickyMetaToggler = () => {
-                console.log(stickyOffsetTop, window.pageYOffset,window.innerHeight ,stickyOffsetTop >= window.pageYOffset + window.innerHeight);
+                // console.log(stickyOffsetTop, window.pageYOffset,window.innerHeight ,stickyOffsetTop >= window.pageYOffset + window.innerHeight);
                 setisSticky(stickyOffsetTop >= window.pageYOffset + window.innerHeight);
             };
             
@@ -102,8 +102,7 @@ function DetailCourse({data}) {
                             icon: <Certificate className="fill-teal-500" />,
                             meta: "Certificate",
                             value: data?.certificate === 1 ? "Tersedia" : "-",
-                        }}/>
-                        
+                        }}/>                        
                     </div>
                 </div>
             </div>
