@@ -30,7 +30,7 @@ export default function Header({ onLight }) {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/Pricing">
                         <a className={[linkColor, "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium"].join(" ")}>Pricing</a>
                     </Link>
                 </li>
